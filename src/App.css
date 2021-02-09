@@ -14,7 +14,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #02022ca9;
+  background-image: url("../../../../../Downloads/metro/metro1.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

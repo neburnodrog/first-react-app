@@ -25,3 +25,9 @@ yarn-error.log*
 #ENVS
 /venv
 .python-version
+
+#VSCODE
+.vscode
+
+#LOCAL FILES
+/public/metro
