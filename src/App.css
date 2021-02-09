@@ -14,8 +14,8 @@
 }
 
 .App-header {
-  background-color: #02022ca9;
-  background-image: url("../../../../../Downloads/metro/metro1.jpg");
+  background-color: hsla(217, 94%, 14%, 0.685);
+  background-image: url("metro/metro6.jpg");
   background-blend-mode: multiply;
   background-size: cover;
   min-height: 100vh;
@@ -38,4 +38,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#counter {
+  align-items: center;
 }

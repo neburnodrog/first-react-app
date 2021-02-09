@@ -30,4 +30,4 @@ yarn-error.log*
 .vscode
 
 #LOCAL FILES
-/public/metro
+/src/metro
