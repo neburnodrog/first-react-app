@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Component } from 'react';
 import Counter from './counterComponent';
 
-class Counters extends Component {
+class CountersList extends Component {
   state = {
     counters: [
       { id: 1, value: 0 },
@@ -22,4 +22,4 @@ class Counters extends Component {
   };
 };
 
-export default Counters;
+export default CountersList;
