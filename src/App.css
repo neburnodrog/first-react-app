@@ -40,6 +40,8 @@
   }
 }
 
-#counter {
-  align-items: center;
+#itemsList {
+  list-style: none;
+
+  justify-content:space-between;
 }
