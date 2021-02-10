@@ -1,9 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import CountersList from './components/countersListComponent';
-import Clock from './components/clockComponent';
-
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import CountersList from "./components/countersListComponent";
+import Clock from "./components/clockComponent";
 
 function App() {
   return (
