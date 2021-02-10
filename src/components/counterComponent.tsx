@@ -1,10 +1,15 @@
 import * as React from 'react';
 import { Component } from 'react';
 
-class Counter extends Component<{ value: number, selected: boolean }> {
+type CounterProps = {
+    value: number;
+    selected: boolean;
+}
+
+class Counter extends Component<CounterProps, {}> {
     state = {
         count: 0,
-        tags: []
+        tags: [],
     };
 
     render() {
