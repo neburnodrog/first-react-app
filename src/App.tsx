@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Counter from './components/counterComponent';
+import CountersList from './components/countersListComponent';
 import Clock from './components/clockComponent';
 
 
@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        <Counter />
+        <CountersList />
       </header>
     </div>
   );
