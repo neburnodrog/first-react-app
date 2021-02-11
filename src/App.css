@@ -1,9 +1,5 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -13,7 +9,7 @@
   }
 }
 
-.App-header {
+.main-container {
   background-color: hsla(217, 94%, 14%, 0.685);
   background-image: url("metro/metro6.jpg");
   background-blend-mode: multiply;
@@ -44,4 +40,8 @@
   list-style: none;
 
   justify-content: space-between;
+}
+
+.badge-width {
+  width: 3em;
 }
