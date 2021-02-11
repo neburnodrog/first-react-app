@@ -14,18 +14,20 @@ interface CounterProps {
 
 export class Counter extends Component<CounterProps> {
   render() {
+    const { counter, onDelete, onIncrement } = this.props;
+
     return (
       <div className="row my-3" id="counter">
         <div className="col">
           <span className={this.getBadgeClass()}>{this.formatCount()}</span>
           <button
-            onClick={() => this.props.onIncrement(this.props.counter)}
+            onClick={() => onIncrement(counter)}
             className="btn btn-light btn-sm"
           >
             Increment
           </button>
           <button
-            onClick={() => this.props.onDelete(this.props.counter.id)}
+            onClick={() => onDelete(counter.id)}
             className="btn btn-danger btn-sm m-2"
           >
             Delete

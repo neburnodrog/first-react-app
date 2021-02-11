@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { CountersList } from "./components/countersListComponent";
 import Clock from "./components/clockComponent";
-import NavComponent from "./components/navComponent";
+import { NavComponent } from "./components/navComponent";
 
 interface CounterId {
   id: number;
@@ -62,7 +62,7 @@ class App extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Learning React
           </a>
           <CountersList
             onIncrement={this.handleIncrement}

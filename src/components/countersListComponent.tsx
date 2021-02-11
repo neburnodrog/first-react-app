@@ -16,19 +16,18 @@ interface CounterListProps {
 
 export class CountersList extends Component<CounterListProps> {
   render() {
+    const { onReset, onIncrement, onDelete, counters } = this.props;
+
     return (
       <div className="container">
-        <button
-          className="btn btn-sm btn-primary m-2"
-          onClick={this.props.onReset}
-        >
+        <button className="btn btn-sm btn-primary m-2" onClick={onReset}>
           Reset
         </button>
-        {this.props.counters.map((c) => (
+        {counters.map((c) => (
           <Counter
             key={c.id}
-            onDelete={this.props.onDelete}
-            onIncrement={this.props.onIncrement}
+            onDelete={onDelete}
+            onIncrement={onIncrement}
             counter={c}
           ></Counter>
         ))}
