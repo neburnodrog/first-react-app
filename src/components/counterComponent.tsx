@@ -1,17 +1,18 @@
 import * as React from "react";
 import { Component } from "react";
 
-interface CounterProps {
+export interface CounterId {
+  id: number;
   value: number;
-  selected: boolean;
 }
 
-class Counter extends Component<CounterProps, {}> {
-  state = {
-    count: 0,
-    tags: ["porridge"],
-  };
+interface CounterProps {
+  counter: CounterId;
+  onDelete: (id: number) => void;
+  onIncrement: (counter: CounterId) => void;
+}
 
+export class Counter extends Component<CounterProps> {
   render() {
     return (
       <div className="container">
@@ -19,46 +20,31 @@ class Counter extends Component<CounterProps, {}> {
           <div className="col">
             <span className={this.getBadgeClass()}>{this.formatCount()}</span>
             <button
-              onClick={() => this.handleIncrement()}
+              onClick={() => this.props.onIncrement(this.props.counter)}
               className="btn btn-light btn-sm"
             >
               Increment
             </button>
+            <button
+              onClick={() => this.props.onDelete(this.props.counter.id)}
+              className="btn btn-danger btn-sm m-2"
+            >
+              Delete
+            </button>
           </div>
         </div>
-
-        <ul className="row my-3" id="itemsList">
-          {this.state.tags.length === 0 && "Please create a new tag!"}
-          {this.renderTags()}
-        </ul>
       </div>
     );
   }
 
-  renderTags() {
-    if (this.state.tags.length === 0) return <p>There are no tags!</p>;
-    return this.state.tags.map((tag) => (
-      <li className="col-sm" key={tag}>
-        {" "}
-        {tag}
-      </li>
-    ));
-  }
-
   formatCount() {
-    const { count } = this.state;
-    return count === 0 ? "Zero" : count;
+    const { value } = this.props.counter;
+    return value === 0 ? "Zero" : value;
   }
 
   getBadgeClass() {
     let classes = "badge m-2 badge-";
-    classes += this.state.count === 0 ? "warning" : "primary";
+    classes += this.props.counter.value === 0 ? "warning" : "primary";
     return classes;
   }
-
-  handleIncrement = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
 }
-
-export default Counter;
