@@ -11,7 +11,7 @@
 
 .main-container {
   background-color: hsla(217, 94%, 14%, 0.685);
-  background-image: url("metro/metro6.jpg");
+  background-image: url("metro/metro7.jpg");
   background-blend-mode: multiply;
   background-size: cover;
   min-height: 100vh;
@@ -38,7 +38,6 @@
 
 #itemsList {
   list-style: none;
-
   justify-content: space-between;
 }
 
