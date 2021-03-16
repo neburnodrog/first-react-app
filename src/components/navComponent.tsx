@@ -4,7 +4,7 @@ interface NavComponentProps {
   totalProducts: number;
 }
 
-export const NavComponent = ({ totalProducts }: NavComponentProps) => {
+export const NavComponent = (props: NavComponentProps) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -19,7 +19,7 @@ export const NavComponent = ({ totalProducts }: NavComponentProps) => {
           <span className="nav-item" style={{ color: "whitesmoke" }}>
             Products:{" "}
             <span className="badge-pill badge-secondary px-3 py-2">
-              {totalProducts}
+              {props.totalProducts}
             </span>
           </span>
         </div>

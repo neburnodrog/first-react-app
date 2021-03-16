@@ -5,7 +5,7 @@ import { CountersList } from "./components/countersListComponent";
 import Clock from "./components/clockComponent";
 import { NavComponent } from "./components/navComponent";
 
-interface CounterId {
+export interface CounterId {
   id: number;
   value: number;
 }
@@ -14,8 +14,8 @@ interface AppState {
   counters: CounterId[];
 }
 
-class App extends React.Component {
-  state: AppState = {
+class App extends React.Component<{}, AppState> {
+  state = {
     counters: [
       { id: 1, value: 0 },
       { id: 2, value: 0 },
@@ -48,10 +48,12 @@ class App extends React.Component {
   };
 
   render() {
+    const { counters } = this.state;
+
     return (
       <>
         <NavComponent
-          totalProducts={this.state.counters.filter((c) => c.value > 0).length}
+          totalProducts={counters.filter((c) => c.value > 0).length}
         />
         <main className="main-container">
           <img src={logo} className="App-logo" alt="logo" />

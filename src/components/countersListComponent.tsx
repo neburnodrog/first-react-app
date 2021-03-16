@@ -1,11 +1,7 @@
 import * as React from "react";
 import { Component } from "react";
 import { Counter } from "./counterComponent";
-
-interface CounterId {
-  id: number;
-  value: number;
-}
+import { CounterId } from "../App";
 
 interface CounterListProps {
   counters: CounterId[];

@@ -1,10 +1,6 @@
 import * as React from "react";
 import { Component } from "react";
-
-interface CounterId {
-  id: number;
-  value: number;
-}
+import { CounterId } from "../App";
 
 interface CounterProps {
   counter: CounterId;
